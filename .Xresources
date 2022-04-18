@@ -1,2 +1,32 @@
-xterm*background: black
-xterm*foreground: white
+Xft.autohint: 1
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+xterm*faceName: SF Mono
+xterm*faceSize: 9
+
+xterm*background: #1E1D2F
+xterm*foreground: #D9E0EE
+
+! Normal
+xterm*color0: #1E1D2F
+xterm*color1: #F28FAD
+xterm*color2: #ABE9B3
+xterm*color3: #FAE3B0
+xterm*color4: #96CDFB
+xterm*color5: #DDB6F2
+xterm*color6: #89DCEB
+xterm*color7: #C3BAC6
+
+! Bright
+xterm*color8: #6E6C7E
+xterm*color9: #E8A2AF
+xterm*color10: #B5E8E0
+xterm*color11: #F5EDCD
+xterm*color12: #B5DCFC
+xterm*color13: #C9CBFF
+xterm*color14: #BEECF4
+xterm*color15: #D9E0EE
