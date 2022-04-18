@@ -87,11 +87,10 @@ awful.layout.layouts = {
 
 mylauncher = awful.widget.button {image = beautiful.awesome_icon}
 
-mylauncher:buttons(gears.table.join(
-    mylauncher:buttons(),
+mylauncher:buttons(
     awful.button({ }, 1, nil,
         function () hotkeys_popup:show_help(nil, awful.screen.focused()) end)
-))
+)
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
