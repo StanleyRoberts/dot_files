@@ -37,8 +37,8 @@ function aur() {
 }
 
 function open() {
-    if [ $1 == notion ]; then
-        screen -dmS notion notion-app-enhanced
+    if [ $1 == sublime ]; then
+        screen -dmS sublime subl
     fi
     screen -dmS $1 $1
 }
