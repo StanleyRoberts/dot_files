@@ -689,8 +689,8 @@ pre.HyperMD-header.HyperMD-header-6 {
 
 /** hr styles -- PREVIEW MODE */
 .markdown-preview-view hr {
-  margin-block-start: 0em;
-  margin-block-end: 0em;
+  margin-block-start: 4em;
+  margin-block-end: 4em;
   border: none;
   height: 0;
   border-bottom: 1px solid;
