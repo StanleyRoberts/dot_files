@@ -5,15 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias update='sudo pacman -Syu'
-alias top='pacman -Qen'
-alias topaur='pacman -Qm'
-alias clean='sudo pacman -Qtdq | sudo pacman -Rns -'
-alias makeaur='makepkg -s -i -c'
-alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"'
-alias config='/usr/bin/git --git-dir=/home/stanley/.cfg/ --work-tree=/home/stanley'
-alias pacman='sudo pacman'
 
 PS1='[\u@\h \W]\$ '
 
@@ -73,3 +64,37 @@ function play() {
 }
 
 neofetch
+
+##-----------------------------------------------------
+## synth-shell-prompt.sh
+if [ -f /home/stanley/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/stanley/.config/synth-shell/synth-shell-prompt.sh
+fi
+
+##-----------------------------------------------------
+## better-ls
+if [ -f /home/stanley/.config/synth-shell/better-ls.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/stanley/.config/synth-shell/better-ls.sh
+fi
+
+##-----------------------------------------------------
+## alias
+if [ -f /home/stanley/.config/synth-shell/alias.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/stanley/.config/synth-shell/alias.sh
+fi
+
+##-----------------------------------------------------
+## better-history
+if [ -f /home/stanley/.config/synth-shell/better-history.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/stanley/.config/synth-shell/better-history.sh
+fi
+
+alias ls='ls --color=auto'
+alias update='sudo pacman -Syu'
+alias top='pacman -Qen'
+alias topaur='pacman -Qm'
+alias clean='sudo pacman -Qtdq | sudo pacman -Rns -'
+alias makeaur='makepkg -s -i -c'
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"'
+alias config='/usr/bin/git --git-dir=/home/stanley/.cfg/ --work-tree=/home/stanley'
+alias pacman='sudo pacman'
