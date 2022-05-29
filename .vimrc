@@ -1,6 +1,7 @@
 set autoindent
+colorscheme dim
+set notermguicolors t_Co=16
 set si
-colorscheme darkblue
 set number
 set expandtab
 set tabstop=4
