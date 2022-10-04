@@ -8,6 +8,8 @@
 
 PS1='[\u@\h \W]\$ '
 
+alias makeaur='makepkg -s -i -c'
+
 export EDITOR=vim
 export VISUAL=vim
 
@@ -30,6 +32,9 @@ function aur() {
 function open() {
     if [ $1 == sublime ]; then
         screen -dmS sublime subl
+    fi 
+    if [ $1 == youtube ]; then
+        screen -dmS firefox firefox --new-window www.youtube.com
     fi
     screen -dmS $1 $1
 }
@@ -61,9 +66,11 @@ function play() {
 
     screen -S "$exe" -X stuff "exit
     "
+    exit
 }
 
 neofetch
+complete -c open
 
 ##-----------------------------------------------------
 ## synth-shell-prompt.sh
@@ -94,7 +101,7 @@ alias update='sudo pacman -Syu'
 alias top='pacman -Qen'
 alias topaur='pacman -Qm'
 alias clean='sudo pacman -Qtdq | sudo pacman -Rns -'
-alias makeaur='makepkg -s -i -c'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"'
 alias config='/usr/bin/git --git-dir=/home/stanley/.cfg/ --work-tree=/home/stanley'
 alias pacman='sudo pacman'
+alias vscode='code'
