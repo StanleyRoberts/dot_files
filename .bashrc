@@ -22,21 +22,30 @@ function updateaur() {
 function aur() {
     cd ~/AUR
     git clone https://aur.archlinux.org/"$1".git
-    if [ $2 == i ]; then
-        cd $1
-        makeaur
-    fi
+    cd $1
+    makeaur
     cd ~
+}
+
+function copen() {
+    if [ $1 == sublime ]; then
+        screen -dmS sublime subl
+    elif [ $1 == youtube ]; then
+        screen -dmS firefox firefox --new-window www.youtube.com
+    else
+        screen -dmS $1 $1
+    fi
+    exit
 }
 
 function open() {
     if [ $1 == sublime ]; then
         screen -dmS sublime subl
-    fi 
-    if [ $1 == youtube ]; then
+    elif [ $1 == youtube ]; then
         screen -dmS firefox firefox --new-window www.youtube.com
+    else
+        screen -dmS $1 $1
     fi
-    screen -dmS $1 $1
 }
 
 function play() {
@@ -71,6 +80,7 @@ function play() {
 
 neofetch
 complete -c open
+complete -c copen
 
 ##-----------------------------------------------------
 ## synth-shell-prompt.sh
