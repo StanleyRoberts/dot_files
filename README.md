@@ -13,4 +13,4 @@ config checkout
 If there are no existing conflicting config files, then the files from this repo will be placed in the new systems $HOME directory.
 
 ### Note
-This readme will also be copied to the $HOME directory. It can safely be deleted, just do not remove it from git tracking.
+This readme will also be copied to the $HOME directory. It can safely be deleted, just do not commit the deletion.
