@@ -7,4 +7,4 @@ function run {
     fi
 }
 
-run xterm
+run tmux

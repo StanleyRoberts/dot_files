@@ -27,17 +27,6 @@ function aur() {
     cd ~
 }
 
-function copen() {
-    if [ $1 == sublime ]; then
-        screen -dmS sublime subl
-    elif [ $1 == youtube ]; then
-        screen -dmS firefox firefox --new-window www.youtube.com
-    else
-        screen -dmS $1 $1
-    fi
-    exit
-}
-
 function open() {
     if [ $1 == sublime ]; then
         screen -dmS sublime subl
@@ -46,6 +35,11 @@ function open() {
     else
         screen -dmS $1 $1
     fi
+}
+
+function copen() {
+    open $1
+    exit
 }
 
 function play() {
@@ -78,7 +72,6 @@ function play() {
     exit
 }
 
-neofetch
 complete -c open
 complete -c copen
 
@@ -115,3 +108,8 @@ alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "sta
 alias config='/usr/bin/git --git-dir=/home/stanley/.cfg/ --work-tree=/home/stanley'
 alias pacman='sudo pacman'
 alias vscode='code'
+
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+    exec tmux new-session >/dev/null 2>&1
+fi
+neofetch
