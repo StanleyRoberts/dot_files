@@ -1,6 +1,6 @@
 set autoindent
-colorscheme dim
-set notermguicolors t_Co=16
+colorscheme catppuccin_macchiato
+set termguicolors
 set si
 set number
 set expandtab
