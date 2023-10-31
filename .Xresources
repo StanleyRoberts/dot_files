@@ -5,6 +5,8 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
+Xcursor.theme: Catppuccin-Macchiato-Dark-Cursors
+
 xterm*faceName: SFMono Nerd Font Mono
 xterm*faceSize: 9
 
